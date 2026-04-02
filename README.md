@@ -4,46 +4,34 @@
 **Description**
 ---------------
 
-This is a basic command-line calculator that performs addition, subtraction, multiplication, and division operations. It uses a dictionary to map user input to the corresponding mathematical operations.
+A simple command-line calculator that allows users to perform basic arithmetic operations (addition, subtraction, multiplication, and division) on two numbers.
 
 **Prerequisites**
-----------------
+-----------------
 
-* Python 3.6 or later (due to the use of f-strings for formatting output)
+* Python 3.6 or higher
+* Basic understanding of Python syntax and data types
 
 **How to Run**
 --------------
 
-1. Save the code in a file with a `.py` extension, e.g., `calculator.py`.
-2. Open a terminal or command prompt and navigate to the directory where you saved the file.
-3. Run the script using Python, e.g., `python calculator.py`.
-4. Follow the prompts to enter your choice of operation, the first number, and the second number.
-5. The calculator will display the result of the operation.
-
-**Code**
-------
-
-```python
-def calculator():
-    """Simple command-line calculator."""
-    ops = {'1': ('+', lambda x, y: x + y), 
-           '2': ('-', lambda x, y: x - y),
-           '3': ('*', lambda x, y: x * y), 
-           '4': ('/', lambda x, y: x / y if y != 0 else "Error")}
-
-    print("1:+, 2:-, 3:*, 4:/")
-    choice = input("Enter choice (1-4): ")
-    if choice in ops:
-        try:
-            n1 = float(input("Num 1: "))
-            n2 = float(input("Num 2: "))
-            op_sym, func = ops[choice]
-            print(f"Result: {func(n1, n2)}")
-        except ValueError:
-            print("Invalid number input.")
-    else:
-        print("Invalid choice.")
-
-# Run the calculator
-calculator()
+1. Make sure Python is installed on your system.
+2. Clone or download the code from a repository (e.g., GitHub).
+3. Save the code in a file with a `.py` extension (e.g., `calculator.py`).
+4. Open a terminal or command prompt and navigate to the directory where you saved the file.
+5. Run the calculator using the following command:
+   ```bash
+python calculator.py
 ```
+6. Follow the prompts to perform calculations:
+   * Enter the operation you want to perform (1 for addition, 2 for subtraction, 3 for multiplication, or 4 for division).
+   * Enter the first number.
+   * Enter the second number.
+   The calculator will display the result or an error message if the input is invalid.
+
+**Code Explanation**
+--------------------
+
+The `calculator.py` file defines a single function `calculator()` that handles user input and performs arithmetic operations. The function uses a dictionary `ops` to map operation numbers (1-4) to their corresponding symbols and functions. The function also includes error handling for invalid user input.
+
+This code is designed to be simple and easy to use, making it suitable for beginners who want to learn about basic Python programming concepts.
