@@ -1,32 +1,34 @@
-import os
-from groq import Groq
-
-api_key = os.getenv("GEMINI_API_KEY") 
-client = Groq(api_key=api_key)
-
-def generate_readme(code_content):
-    prompt = f"""
-    You are an expert technical writer. Write a clear, professional README.md 
-    for the following code. Include a Title, Description, Prerequisites, 
-    and How to Run sections. Here is the code:
-
-    {code_content}
-    """
+def calculator():
+    """Simple command-line calculator."""
     
-    chat_completion = client.chat.completions.create(
-        messages=[{"role": "user", "content": prompt}],
-        model="llama-3.1-8b-instant", 
-    )
-    return chat_completion.choices[0].message.content
+    ops = {
+        '1': ('+', lambda x, y: x + y), 
+        '2': ('-', lambda x, y: x - y),
+        '3': ('*', lambda x, y: x * y), 
+        '4': ('/', lambda x, y: x / y),
+        '5': ('^2', lambda x: x * x)
+    }
 
-if __name__ == "__main__":
-    with open("app.py", "r") as f:
-        code = f.read()
+    print("1:+, 2:-, 3:*, 4:/, 5:^2")
+    choice = input("Enter choice (1-5): ")
 
-    print("Generating documentation via Groq AI...")
-    readme_content = generate_readme(code)
+    if choice in ops:
+        try:
+            if choice == '5':  # Square operation
+                n1 = float(input("Enter number: "))
+                op_sym, func = ops[choice]
+                print(f"Result: {func(n1)}")
+            else:
+                n1 = float(input("Num 1: "))
+                n2 = float(input("Num 2: "))
+                op_sym, func = ops[choice]
 
-    with open("README.md", "w") as file:
-        file.write(readme_content)
+                if choice == '4' and n2 == 0:
+                    print("Error: Division by zero")
+                else:
+                    print(f"Result: {func(n1, n2)}")
 
-    print("README.md successfully updated!")
+        except ValueError:
+            print("Invalid number input.")
+    else:
+        print("Invalid choice.")
