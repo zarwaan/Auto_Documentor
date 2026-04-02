@@ -1,30 +1,33 @@
-### Command-Line Calculator
+# Simple Command-Line Calculator
+================================
 
-#### Description
-This is a simple command-line calculator that performs basic arithmetic operations such as addition, subtraction, multiplication, and division. The user is prompted to select an operation and enter two numbers, after which the result is displayed.
+## Description
 
-#### Prerequisites
-To run this calculator, you need to have Python 3.x installed on your system.
+This is a simple command-line calculator that allows users to perform basic arithmetic operations like addition, subtraction, multiplication, and division.
 
-#### How to Run
- Follow these steps to use the calculator:
+## Prerequisites
 
-1. Save the above code in a file named `calculator.py`.
-2. Open a terminal or command prompt and navigate to the directory where you saved the file.
-3. Run the calculator by typing `python calculator.py` and pressing Enter.
-4. Follow the on-screen prompts to select an operation and enter two numbers.
-5. The result will be displayed in the terminal.
+* Python 3.6 or later (tested with Python 3.9)
 
-#### Usage Example
-Here's a sample interaction with the calculator:
+## How to Run
 
-```
-$ python calculator.py
-1:+, 2:-, 3:*, 4:/
-Enter choice (1-4): 1
-Num 1: 5
-Num 2: 3
-Result: 8.0
-```
+1. Clone the repository or download the `calculator.py` file.
+2. Open a terminal and navigate to the directory containing the `calculator.py` file.
+3. Run the calculator by executing the following command: `python calculator.py`
+4. The calculator will display the available arithmetic operations (1: addition, 2: subtraction, 3: multiplication, 4: division).
+5. Enter the number of the operation you want to perform and press enter.
+6. Enter the two numbers and press enter. The calculator will display the result.
 
-Note: This Python code is designed for basic arithmetic operations and does not handle more complex mathematical expressions or edge cases. For a more comprehensive math library, consider using a dedicated package like NumPy.
+## Example Use Cases
+
+* Perform simple arithmetic operations like addition, subtraction, multiplication, and division.
+* Test the calculator with different input values to ensure it works correctly.
+
+## Troubleshooting
+
+* If you encounter any errors, check the input values for invalid characters or values outside the range of the arithmetic operation.
+* If you're using an older version of Python, upgrade to Python 3.6 or later to ensure compatibility.
+
+## License
+
+This code is released under the MIT License. See the LICENSE file for details.
