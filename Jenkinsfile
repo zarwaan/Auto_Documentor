@@ -1,13 +1,10 @@
 pipeline {
     agent any
-    
-    // Pulling the secure keys from Jenkins Credentials using their IDs
     environment {
-        // Use the ID name you gave it in Jenkins, e.g., 'gemini-api-key'
+        // This is for the Python script
         GEMINI_API_KEY = credentials('gemini-api-key')
-        
-        // Use the ID name you gave it in Jenkins, e.g., 'github-token'
-        GITHUB_CREDS = credentials('github-token')
+        // This is for pushing back to GitHub
+        GITHUB_CREDS = credentials('github-token-push')
     }
     
     stages {
