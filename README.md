@@ -4,41 +4,45 @@
 **Description**
 ---------------
 
-This is a simple command-line calculator that performs basic arithmetic operations (+, -, \*, /) on floating-point numbers. The calculator displays a menu to the user, allowing them to select the operation they wish to perform.
+This is a simple command-line calculator that performs basic arithmetic operations, such as addition, subtraction, multiplication, division, and squaring. The calculator takes user input using a numbered menu and allows users to enter two numbers (for operations 1-4) or a single number (for operation 5).
 
 **Prerequisites**
------------------
+----------------
 
-* Python 3.x (tested on Python 3.8 and above)
-* A computer with a terminal or command prompt capable of running Python scripts
+* Python 3.x installed on your system
+* A terminal or command prompt to run the calculator
 
 **How to Run**
 --------------
 
-1. Clone this repository to your local machine using your preferred method (e.g., `git clone https://github.com/username/calculator.git`).
-2. Navigate to the project directory in your terminal or command prompt.
-3. Run the calculator script using Python: `python calculator.py` (or `python3 calculator.py` in some environments).
-4. Follow the on-screen instructions to select an operation and enter numbers.
+1. Save this code in a file named `calculator.py`.
+2. Open a terminal or command prompt and navigate to the directory where you saved the file.
+3. Run the command `python calculator.py` to execute the calculator.
+4. Follow the on-screen menu to enter your choice and numbers.
 
 **Example Usage**
------------------
+----------------
 
 ```
 $ python calculator.py
-1:+, 2:-, 3:*, 4:/
-Enter choice (1-4): 2
-Num 1: 5
-Num 2: 3
-Result: 2.0
+1:+, 2:-, 3:*, 4:/, 5:^2
+Enter choice (1-5): 3
+Num 1: 4
+Num 2: 5
+Result: 20
+
+$ python calculator.py
+1:+, 2:-, 3:*, 4:/, 5:^2
+Enter choice (1-5): 5
+Enter number: 4
+Result: 16
+
+$ python calculator.py
+1:+, 2:-, 3:*, 4:/, 5:^2
+Enter choice (1-5): 4
+Num 1: 10
+Num 2: 0
+Error: Division by zero
 ```
 
-**Troubleshooting**
-------------------
-
-* If you encounter an error message stating "Invalid number input.", ensure that you have entered valid decimal numbers for the operands.
-* If you encounter an error message stating "Invalid choice.", ensure that you have selected a valid operation number (1-4).
-
-**Code Explanation**
--------------------
-
-The calculator script defines a `calculator` function that uses a dictionary `ops` to map operation symbols to their corresponding functions and operations. The user's choice is validated, and if input, the calculator attempts to parse and validate the operands. Finally, the operation is performed, and the result is displayed.
+Note: This code uses a dictionary to map user input to mathematical operations, making it easy to add or remove operations in the future. However, it does not handle multiple-digit numbers or more complex mathematical operations.
