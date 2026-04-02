@@ -1,23 +1,66 @@
-**Simple Command-Line Calculator**
-=====================================
+# Title
+Simple Command-Line Calculator
+================================
 
-### Description
+# Description
+----------------
 
-This is a simple command-line calculator that performs basic arithmetic operations. It allows users to choose an operation, input two numbers, and view the result.
+A simple command-line calculator implemented in Python. This calculator supports basic arithmetic operations, including addition, subtraction, multiplication, and division.
 
-### Prerequisites
+# Prerequisites
+----------------
 
 * Python 3.6 or later
-* No external dependencies required
+* A terminal or command prompt
 
-### How to Run
+# How to Run
+-------------
 
-1. Clone this repository or download the `calculator.py` script.
-2. Open a terminal or command prompt and navigate to the directory where you saved the script.
-3. Run the script using Python: `python calculator.py`
-4. Follow the prompts to select an operation and input numbers.
-5. View the result on the command line.
+### Clone or Download the Repository
 
-### Getting Started
+Clone this repository using Git:
 
-To use the calculator, simply run the script and follow the on-screen instructions. Choose an operation by entering the corresponding number (1: +, 2: -, 3: *, 4: /), and then input two numbers. The result will be displayed on the command line.
+```bash
+git clone https://github.com/your-username/simple-calculator.git
+```
+
+or download the code as a zip file:
+
+```bash
+wget https://github.com/your-username/simple-calculator/archive/master.zip
+```
+
+### Run the Script
+
+Navigate to the root directory of the repository and run the calculator script:
+
+```bash
+python calculator.py
+```
+
+### Use the Calculator
+
+The calculator will display a list of supported operations. Enter the corresponding number to select an operation:
+
+```
+1:+, 2:-, 3:*, 4:/
+```
+
+Enter your choice of operation (1-4). Then, enter two numbers to perform the calculation. The result will be displayed on the screen.
+
+### Example Usage
+
+Here's an example of how to use the calculator:
+
+```
+$ python calculator.py
+1:+, 2:-, 3:*, 4:/
+Enter choice (1-4): 3
+Num 1: 10
+Num 2: 2
+Result: 20.0
+```
+
+### Troubleshooting
+
+If you encounter any issues, refer to the [Python documentation](https://docs.python.org/3/) for troubleshooting common problems.
