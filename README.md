@@ -1,49 +1,38 @@
-**Calculator**
-=============
+# Title: Groq AI README Generator
 
-**Description**
----------------
+## Description
 
-This is a simple command-line calculator that supports basic arithmetic operations such as addition, subtraction, multiplication, division, and squaring. The calculator allows users to choose an operation and input their numbers, providing a clear and concise result.
+This script uses the Groq API and a natural language processing (NLP) model to generate a professional README file for a given codebase. The generated README file includes a title, description, prerequisites, and instructions on how to run the code.
 
-**Prerequisites**
------------------
+## Prerequisites
 
-To run the calculator, you will need:
+* The Groq library must be installed (`pip install groq`)
+* The Gemini API key must be set as an environment variable (`GEMINI_API_KEY`)
+* The `llama-3.1-8b-instant` model must be available in the Groq account
 
-* Python 3.x installed on your system
-* A compatible text editor or IDE for modifying the code
-* Access to a command prompt or terminal
+## How to Run
 
-**How to Run**
---------------
+1. Replace the `app.py` file with the code for which you want to generate a README file.
+2. Run the script using `python main.py` (assuming the script is named `main.py`)
+3. The script will generate a `README.md` file in the same directory, including a title, description, prerequisites, and how to run sections.
 
-### Step 1: Install Python (if necessary)
+Note: The `GEMINI_API_KEY` environment variable must be set to a valid API key for this script to work. The `llama-3.1-8b-instant` model must also be available in the Groq account.
 
-If you do not have Python installed on your system, please download and install the latest version from the official [Python website](https://www.python.org/downloads/).
+Here is the generated README file:
+```markdown
+# Title
+Generated README file for the codebase
 
-### Step 2: Save the Calculator Code
+## Description
+This script uses the Groq API and a natural language processing (NLP) model to generate a professional README file for a given codebase. The generated README file includes a title, description, prerequisites, and instructions on how to run the code.
 
-Save the calculator code in a file named `calculator.py`. This file should include the provided code.
+## Prerequisites
+* The Groq library must be installed (`pip install groq`)
+* The Gemini API key must be set as an environment variable (`GEMINI_API_KEY`)
+* The `llama-3.1-8b-instant` model must be available in the Groq account
 
-### Step 3: Run the Calculator
-
-Open a command prompt or terminal, navigate to the directory containing the `calculator.py` file, and run the following command:
-```bash
-python calculator.py
+## How to Run
+1. Replace the `app.py` file with the code for which you want to generate a README file.
+2. Run the script using `python main.py` (assuming the script is named `main.py`)
+3. The script will generate a `README.md` file in the same directory, including a title, description, prerequisites, and how to run sections.
 ```
-This will launch the calculator and display the available operations.
-
-**Using the Calculator**
-------------------------
-
-To use the calculator, simply follow these steps:
-
-1. Choose an operation by entering the corresponding number (1-5)
-2. If necessary, input two numbers
-3. The calculator will display the result of the operation
-
-**Troubleshooting**
-------------------
-
-If you encounter any issues, such as invalid number input or division by zero, the calculator will display an error message. Please refer to the error message for more information.
