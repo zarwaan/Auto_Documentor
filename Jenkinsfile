@@ -1,11 +1,11 @@
 pipeline {
     agent 
-    // {
-    //     docker {
-    //         image 'python:3.10'
-    //     }
-    // }
-    any
+    {
+        docker {
+            image 'python:3.10'
+        }
+    }
+    // any
 
     environment {
         GROQ_API_KEY = credentials('groq-api-key')
