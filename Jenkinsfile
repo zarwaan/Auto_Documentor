@@ -7,15 +7,22 @@ pipeline {
     }
 
     stages {
-        stage('Install Dependencies') {
+        stage('Setup Python Environment') {
             steps {
-                sh 'pip install groq'
+                sh '''
+                python3 -m venv venv
+                . venv/bin/activate
+                pip install groq
+                '''
             }
         }
 
         stage('Generate Documentation') {
             steps {
-                sh 'python generate_docs.py'
+                sh '''
+                . venv/bin/activate
+                python generate_docs.py
+                '''
             }
         }
 
