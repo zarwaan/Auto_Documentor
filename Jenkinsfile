@@ -26,13 +26,13 @@ pipeline {
                 
         stage('Install Dependencies') {
             steps {
-                sh 'pip3 install groq'
+                sh 'pip install groq'
             }
         }
         
         stage('Generate Documentation') {
             steps {
-                sh 'python3 generate_docs.py'
+                sh 'python generate_docs.py'
             }
         }
         
