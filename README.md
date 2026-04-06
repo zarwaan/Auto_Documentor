@@ -1,78 +1,44 @@
-# **N-Queens Problem Solver**
+**Greeting Printer**
+=====================
 
 **Description**
+---------------
 
-This is a Python implementation of the classic N-Queens problem, a puzzle where we place N queens on an NxN chessboard such that no queen attacks another. The program takes the size of the chessboard as input and prints a solution if one exists.
+A simple Python script that prints out a series of greetings to the console.
 
-### **Prerequisites**
+**Prerequisites**
+----------------
 
-* Python 3.x
+* Python 3.6 or later installed on your system.
+* A code editor or IDE of your choice (optional).
 
-### **How to Run**
+**How to Run**
+--------------
 
-1. Save the code in a file named `n_queens.py`.
-2. Open a terminal and navigate to the directory where the file is saved.
-3. Run the program by typing `python n_queens.py`.
-4. When prompted, enter the total number of rows (and columns) of the chessboard.
+### Using Python
 
-The program will then print a solution if one exists, and display an error message if no solution can be found.
+1. Save the following code in a file with a `.py` extension, for example, `greeting_printer.py`.
+2. Open a terminal or command prompt and navigate to the directory where you saved the file.
+3. Type `python greeting_printer.py` and press Enter.
+4. The script will print out the greetings to the console.
 
-```markdown
-## Code Overview
+### Using an IDE
 
-The code consists of four main functions:
+1. Install a code editor or IDE of your choice (e.g., PyCharm, Visual Studio Code, Sublime Text).
+2. Create a new Python project and add the above code to a new file (e.g., `greeting_printer.py`).
+3. Run the script using the IDE's run feature (e.g., click the "Play" button or press F5).
 
-### **printSolution(board)**
+### Code
 
-Prints the solution to the N-Queens problem, which is represented as a 2D list `board`.
-
-### **isSafe(board, row, col)**
-
-Checks if it is safe to place a queen at position `(row, col)` on the chessboard.
-
-### **solveNQUtil(board, col)**
-
-A recursive helper function that attempts to place queens on the chessboard from left to right.
-
-### **solveNQ()**
-
-The main function that calls `solveNQUtil` to find a solution to the N-Queens problem.
-
-## API Documentation
-
-### **printSolution(board)**
-
-Prints the solution to the N-Queens problem.
-
-* **Arguments:**
-	+ `board`: A 2D list representing the chessboard.
-* **Returns:** None
-
-### **isSafe(board, row, col)**
-
-Checks if it is safe to place a queen at position `(row, col)` on the chessboard.
-
-* **Arguments:**
-	+ `board`: A 2D list representing the chessboard.
-	+ `row`: The row index.
-	+ `col`: The column index.
-* **Returns:** `True` if it is safe to place a queen, `False` otherwise.
-
-### **solveNQUtil(board, col)**
-
-A recursive helper function that attempts to place queens on the chessboard from left to right.
-
-* **Arguments:**
-	+ `board`: A 2D list representing the chessboard.
-	+ `col`: The current column index.
-* **Returns:** `True` if a solution is found, `False` otherwise.
-
-### **solveNQ()**
-
-The main function that calls `solveNQUtil` to find a solution to the N-Queens problem.
-
-* **Arguments:** None
-* **Returns:** `True` if a solution is found, `False` otherwise.
+```python
+print("I'm like hey wassup hello")
+print("Line 2")
+print("Line 3")
+print("Line 4")
+print("Line 5")
 ```
 
-Note: This README follows the standard format for technical writing, with a clear title, description, and API documentation for each function. The code is well-organized and easy to understand, with clear comments and variable names. The usage instructions are easy to follow, and the code is ready for use.
+**Notes**
+--------
+
+This script is a simple example of a Python program. It does not perform any complex operations, but rather demonstrates basic syntax and output. You can modify the script to suit your needs by adding more print statements or using variables to store and manipulate data.
