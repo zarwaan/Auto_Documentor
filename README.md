@@ -1,49 +1,67 @@
-# Title
-Project Introduction
-====================
-### A Simple Project for Demonstrating Code Structure
+**Simple Task Manager CLI Application**
+======================================
 
-# Description
-====================
-This repository contains a basic Python project that showcases a simple print statement. The project is designed to demonstrate a standard project structure for future reference.
+**Description**
+---------------
 
-# Prerequisites
-====================
-Before running the project, make sure you have the following:
+A simple command-line interface (CLI) application for managing tasks. Users can add, view, and complete tasks using a menu-driven interface.
 
-- Python installed on your system (`python -v`)
-- A code editor or IDE of your choice (e.g., Visual Studio Code, PyCharm)
+**Prerequisites**
+----------------
 
-# How to Run
-====================
-To run the project, follow these steps:
+* Python 3.6 or later
+* No additional dependencies required
 
-### Step 1: Clone the repository
-Clone the repository to your local machine using Git:
+**How to Run**
+--------------
 
-```bash
-git clone https://github.com/your-username/your-project.git
+1. Clone the repository or save the code to a file named `task_manager.py`.
+2. Navigate to the directory containing the file in your terminal or command prompt.
+3. Run the application using `python task_manager.py`.
+4. Follow the menu-driven interface to add, view, and complete tasks.
+
+**Troubleshooting**
+-------------------
+
+* If you encounter any errors, please ensure you are running the latest version of Python and that the code is saved correctly.
+* If you are using an IDE, try running the code in the terminal or command prompt for best results.
+
+Example Usage
+-------------
+
+```
+$ python task_manager.py
+
+1. Add Task
+2. View Tasks
+3. Complete Task
+4. Exit
+Enter choice: 1
+Enter task: Buy groceries
+$ python task_manager.py
+
+1. Add Task
+2. View Tasks
+3. Complete Task
+4. Exit
+Enter choice: 2
+1. Buy groceries [✘]
+$ python task_manager.py
+
+1. Add Task
+2. View Tasks
+3. Complete Task
+4. Exit
+Enter choice: 3
+Enter task number: 1
+$ python task_manager.py
+
+1. Add Task
+2. View Tasks
+3. Complete Task
+4. Exit
+Enter choice: 2
+1. Buy groceries [✔]
 ```
 
-### Step 2: Navigate to the project directory
-Navigate to the project directory:
-
-```bash
-cd your-project
-```
-
-### Step 3: Run the script
-Run the Python script using the `python` command:
-
-```bash
-python main.py
-```
-
-You should see the output: `This is a project`
-
-### Note
-The project uses the standard `main.py` file as the entry point. Make sure to create this file in the project root directory.
-
-# Contributing
-====================
-If you'd like to contribute to this project, please see our [Contributing Guidelines](CONTRIBUTING.md).
+Remember to replace the task names and numbers with your own input.
