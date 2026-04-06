@@ -7,12 +7,6 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/zarwaan/Auto_Documentor.git'
-            }
-        }
-
         stage('Install Dependencies') {
             steps {
                 sh 'pip install groq'
