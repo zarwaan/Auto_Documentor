@@ -1,45 +1,49 @@
-**Greeter Script**
-================
-A simple Python script designed to print a series of greetings.
+# Title
+Project Introduction
+====================
+### A Simple Project for Demonstrating Code Structure
 
-**Description**
----------------
+# Description
+====================
+This repository contains a basic Python project that showcases a simple print statement. The project is designed to demonstrate a standard project structure for future reference.
 
-This script serves as a basic example of printing multi-line messages to the console. It consists of five print statements, each with a unique greeting message.
+# Prerequisites
+====================
+Before running the project, make sure you have the following:
 
-**Prerequisites**
------------------
+- Python installed on your system (`python -v`)
+- A code editor or IDE of your choice (e.g., Visual Studio Code, PyCharm)
 
-* Python 3.x (latest version recommended)
-* A text editor or code IDE of your choice
-* Basic understanding of Python syntax
+# How to Run
+====================
+To run the project, follow these steps:
 
-**How to Run**
---------------
+### Step 1: Clone the repository
+Clone the repository to your local machine using Git:
 
-### Step 1: Install Python (if not already installed)
-
-Download and install Python from the official Python website: <https://www.python.org/downloads/>
-
-### Step 2: Save the Script
-
-Save the provided code in a file named `greeter.py`. It is recommended to create a new folder for your script and add the file to it.
-
-### Step 3: Run the Script
-
-1. Open a terminal or command prompt and navigate to the folder containing the `greeter.py` file.
-2. Type `python greeter.py` and press Enter.
-
-You should see the following output:
-
-```
-I'm like hey wassup hello
-Line 2
-Line 3
-Line 4
-Line 5
+```bash
+git clone https://github.com/your-username/your-project.git
 ```
 
-### Optional: Modifying the Script
+### Step 2: Navigate to the project directory
+Navigate to the project directory:
 
-Feel free to modify the contents of the script as per your requirements. The script is written in Python, so you can experiment with different Python code within the script.
+```bash
+cd your-project
+```
+
+### Step 3: Run the script
+Run the Python script using the `python` command:
+
+```bash
+python main.py
+```
+
+You should see the output: `This is a project`
+
+### Note
+The project uses the standard `main.py` file as the entry point. Make sure to create this file in the project root directory.
+
+# Contributing
+====================
+If you'd like to contribute to this project, please see our [Contributing Guidelines](CONTRIBUTING.md).
