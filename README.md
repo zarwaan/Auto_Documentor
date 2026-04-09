@@ -1,116 +1,21 @@
-**README.md**
-================
+# Groq README Generator
 
-**Title**
---------
+## Description
+A Python script that uses the Groq API to generate a README.md file for a given code snippet. The script sends the code to the model, which then produces a clear, professional README.md file.
 
-N-Queens Problem Solver
-------------------------
+## Prerequisites
+Before running this script, ensure you have the following:
 
-**Description**
-------------
+- Groq API key: Obtain a Groq API key by creating an account on the Groq website. Replace `GROQ_API_KEY` with your actual API key in the code.
+- Llama-3.1-8b-instant model: Ensure the Llama-3.1-8b-instant model is enabled in your Groq account. If not, enable it before running the script.
 
-This is a Python program that solves the N-Queens problem, a classic puzzle in which N queens must be placed on an NxN chessboard such that no two queens attack each other.
+## How to Run
+To run this script, follow these steps:
 
-**Prerequisites**
-----------------
+1. Install the required `groq` library by running `pip install groq` in your terminal.
+2. Replace `GROQ_API_KEY` with your actual Groq API key in the code.
+3. Place the script (`generate_readme.py`) in the same directory as the code for which you want to generate a README.md file.
+4. Run the script using `python generate_readme.py`.
+5. The script will generate a README.md file in the same directory, replacing any existing file with the same name.
 
-* Python 3.x
-
-**How to Run**
---------------
-
-### Step 1: Clone the Repository
-
-```bash
-git clone https://github.com/your-username/NQueens-Solver.git
-```
-
-### Step 2: Install Required Packages (optional)
-
-This program does not require any external packages, but if you want to run it from a IDE like PyCharm, you can install the `py_compile` and `unittest` packages:
-
-```bash
-pip install py_compile unittest
-```
-
-### Step 3: Run the Program
-
-```bash
-python nqueens_solver.py
-```
-
-You will be prompted to enter the number of queens (N). Enter a positive integer and press Enter.
-
-### Step 4: View the Solution
-
-If a solution exists, the program will print the final configuration of the queens on the board.
-
-### Note
-
-* The program uses a recursive backtracking algorithm to find a solution.
-* The `solveNQUtil` function is used to recursively place queens on the board, and the `isSafe` function checks whether it is safe to place a queen at a given position.
-* The program prints the solution in a grid format, where 1s represent queens and 0s represent empty squares.
-
-```python
-# nqueens_solver.py
-import os
-
-# Global variables
-global N
-
-def printSolution(board):
-    """Prints the final configuration of the queens on the board"""
-    for i in range(N):
-        for j in range(N):
-            print(board[i][j], end=' ')
-        print()
-
-def isSafe(board, row, col):
-    """Checks whether it is safe to place a queen at a given position"""
-    for i in range(col):
-        if board[row][i] == 1:
-            return False
-
-    for i, j in zip(range(row, -1, -1), range(col, -1, -1)):
-        if board[i][j] == 1:
-            return False
-
-    for i, j in zip(range(row, N, 1), range(col, -1, -1)):
-        if board[i][j] == 1:
-            return False
-
-    return True
-
-def solveNQUtil(board, col):
-    """Recursively places queens on the board to find a solution"""
-    if col >= N:
-        return True
-
-    for i in range(N):
-        if isSafe(board, i, col):
-            board[i][col] = 1
-
-            if solveNQUtil(board, col + 1) == True:
-                return True
-
-            board[i][col] = 0
-
-    return False
-
-def solveNQ():
-    """Solves the N-Queens problem"""
-    global n
-    board = [[0] * n for _ in range(n)]
-
-    if solveNQUtil(board, 0) == False:
-        print("Solution does not exist")
-        return False
-
-    printSolution(board)
-    return True
-
-n = int(input("Enter total number of rows: "))
-N = n
-solveNQ()
-```
+This script is intended for personal use and is not meant for production deployment. The generated README.md file may require manual editing for optimal readability and formatting.
