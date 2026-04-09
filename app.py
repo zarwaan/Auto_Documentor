@@ -1,58 +1,53 @@
-"""
-Simple Task Manager CLI Application
-"""
+global N
 
-class TaskManager:
-    def __init__(self):
-        self.tasks = []
+def printSolution(board):
+	for i in range(N):
+		for j in range(N):
+			print (board[i][j],end=' ')
+		print()
 
-    def add_task(self, task):
-        """Add a new task"""
-        self.tasks.append({"task": task, "completed": False})
+def isSafe(board, row, col):
+	for i in range(col):
+		if board[row][i] == 1:
+			return False
 
-    def list_tasks(self):
-        """List all tasks"""
-        if not self.tasks:
-            print("No tasks available.")
-            return
-        
-        for i, t in enumerate(self.tasks, 1):
-            status = "✔" if t["completed"] else "✘"
-            print(f"{i}. {t['task']} [{status}]")
+	for i, j in zip(range(row, -1, -1), range(col, -1, -1)):
+		if board[i][j] == 1:
+			return False
 
-    def complete_task(self, index):
-        """Mark a task as completed"""
-        if 0 <= index < len(self.tasks):
-            self.tasks[index]["completed"] = True
-        else:
-            print("Invalid task number")
+	for i, j in zip(range(row, N, 1), range(col, -1, -1)):
+		if board[i][j] == 1:
+			return False
 
+	return True
 
-def main():
-    manager = TaskManager()
+def solveNQUtil(board, col):
 
-    while True:
-        print("\n1. Add Task\n2. View Tasks\n3. Complete Task\n4. Exit")
-        choice = input("Enter choice: ")
+	if col >= N:
+		return True
 
-        if choice == "1":
-            task = input("Enter task: ")
-            manager.add_task(task)
+	for i in range(N):
 
-        elif choice == "2":
-            manager.list_tasks()
+		if isSafe(board, i, col):
+			board[i][col] = 1
 
-        elif choice == "3":
-            index = int(input("Enter task number: ")) - 1
-            manager.complete_task(index)
+			if solveNQUtil(board, col + 1) == True:
+				return True
 
-        elif choice == "4":
-            print("Exiting...")
-            break
+			board[i][col] = 0
 
-        else:
-            print("Invalid choice")
+	return False
 
+def solveNQ():
+	board = [[0] * n for _ in range(n)]
 
-if __name__ == "__main__":
-    main()
+	if solveNQUtil(board, 0) == False:
+		print ("Solution does not exist")
+		return False
+
+	printSolution(board)
+	return True
+
+n = int(input("Enter total number of rows: "))
+N = n
+solveNQ()
